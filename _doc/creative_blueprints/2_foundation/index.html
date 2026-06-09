@@ -1,0 +1,83 @@
+<style>
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-problem { width: 46%; }
+.mode-landscape .sl-solution { width: 54%; }
+.mode-portrait .sl-problem { width: 100%; }
+.mode-portrait .sl-solution { width: 100%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: The Problem (dark) -->
+    <div class="sl-problem bg-indigo-950 flex flex-col justify-center p-12">
+      <p class="text-amber-400 text-xs font-bold tracking-widest uppercase mb-4">The Problem</p>
+      <h2 class="text-3xl font-black text-white leading-tight mb-8">
+        Managing escape rooms is still a spreadsheet nightmare.
+      </h2>
+      <div class="space-y-6">
+
+        <div class="flex gap-4 items-start">
+          <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-black text-sm flex-shrink-0 mt-0.5">1</div>
+          <div>
+            <p class="text-white font-bold text-sm">Bookings fall through the cracks</p>
+            <p class="text-indigo-300 text-xs mt-1 leading-relaxed">Manual calendars, phone calls, and DMs cause missed slots and double-bookings that kill revenue.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-black text-sm flex-shrink-0 mt-0.5">2</div>
+          <div>
+            <p class="text-white font-bold text-sm">Puzzles go stale, silently</p>
+            <p class="text-indigo-300 text-xs mt-1 leading-relaxed">No tracking means repeat visitors hit the same worn-out props and broken hints — and don't come back.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-black text-sm flex-shrink-0 mt-0.5">3</div>
+          <div>
+            <p class="text-white font-bold text-sm">Staffing is last-minute chaos</p>
+            <p class="text-indigo-300 text-xs mt-1 leading-relaxed">Game masters miss shifts, managers scramble to cover, and no one has a clear view of who's assigned where.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right: The Solution (light) + visual -->
+    <div class="sl-solution flex flex-col">
+
+      <!-- Image band -->
+      <div class="relative overflow-hidden" style="flex: 1;">
+        <img
+          src="http://localhost:8001/common/image-generation?prompt=confident+escape+room+business+owner+reviewing+digital+dashboard+organized+modern+office+warm+professional+lighting"
+          alt="EscapeOps in use"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-indigo-900 opacity-10"></div>
+      </div>
+
+      <!-- Solution summary -->
+      <div class="bg-white p-10">
+        <p class="text-indigo-700 text-xs font-bold tracking-widest uppercase mb-3">The Solution</p>
+        <h3 class="text-2xl font-black text-slate-900 mb-5">EscapeOps — one platform, total control.</h3>
+        <div class="grid grid-cols-3 gap-3">
+          <div class="bg-indigo-50 rounded-xl p-4 text-center">
+            <p class="text-xl mb-1">📅</p>
+            <p class="text-indigo-800 font-bold text-xs leading-tight">Smart Bookings</p>
+          </div>
+          <div class="bg-amber-50 rounded-xl p-4 text-center">
+            <p class="text-xl mb-1">🧩</p>
+            <p class="text-amber-800 font-bold text-xs leading-tight">Puzzle Freshness</p>
+          </div>
+          <div class="bg-emerald-50 rounded-xl p-4 text-center">
+            <p class="text-xl mb-1">👥</p>
+            <p class="text-emerald-800 font-bold text-xs leading-tight">Team Schedules</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
