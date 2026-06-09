@@ -2,6 +2,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { readdir } from "node:fs/promises";
 import { createLogger } from "~/lib/logger";
+import { seedEscapeOps } from "~/escapeops/seed";
 
 const logger = createLogger("Seed");
 
@@ -102,9 +103,13 @@ export async function runSeeds(): Promise<void> {
       await seed.run();
     }
 
-    logger.info("✅ All seed operations completed successfully");
+    // Run EscapeOps-specific seeds (rooms, puzzles, shifts, bookings demo data)
+    logger.info("Running EscapeOps data seed...");
+    await seedEscapeOps();
+
+    logger.info("All seed operations completed successfully");
   } catch (error) {
-    logger.error("❌ Seed operations failed:", error);
-    logger.warn("⚠️ Server will continue despite seeding failure");
+    logger.error("Seed operations failed:", error);
+    logger.warn("Server will continue despite seeding failure");
   }
 }

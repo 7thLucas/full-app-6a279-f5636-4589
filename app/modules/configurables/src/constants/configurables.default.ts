@@ -12,35 +12,51 @@ export type TBrandColor = {
   accent: string;
 };
 
+export type TRoomConfig = {
+  name: string;
+  theme: string;
+  capacity: number;
+  difficultyRating: number;
+};
+
 export type TDefaultConfigurableData = {
   appName: string;
   logoUrl: string;
+  tagline: string;
   brandColor: TBrandColor;
-  // Mirror new schema fields here. Example:
-  //   maxItemsPerPage?: number;
-  //   enableNotifications?: boolean;
-  //   featuredCategories?: string[];
+  businessName: string;
+  contactEmail: string;
+  defaultSessionDurationMinutes: number;
+  bookingSlotIntervalMinutes: number;
+  puzzleFreshnessThresholdDays: number;
+  maxGroupSize: number;
+  enableWaitlist: boolean;
+  enableEmailNotifications: boolean;
+  dashboardWelcomeMessage: string;
+  rooms: TRoomConfig[];
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "FILL_APP_NAME_HERE",
+  appName: "EscapeOps",
   logoUrl: "FILL_LOGO_URL_HERE",
+  tagline: "Run your rooms. Own your ops.",
   brandColor: {
-    primary: "FILL_PRIMARY_COLOR_HERE",
-    secondary: "FILL_SECONDARY_COLOR_HERE",
-    accent: "FILL_ACCENT_COLOR_HERE",
+    primary: "#4F46E5",
+    secondary: "#1e293b",
+    accent: "#F59E0B",
   },
-  // ─────────────────────────────────────────────────────────────────────
-  // Add new field defaults here. See RULES.md §5 for per-type shape.
-  // Required branding fields → use the FILL_X_HERE placeholder pattern.
-  // Optional/typed defaults → real value with a "// fill it here" comment:
-  //
-  //   maxItemsPerPage: 12,                     // fill it here
-  //   enableNotifications: true,               // fill it here
-  //   featuredCategories: [],                  // fill it here
-  //   defaultLanguage: "en",                   // must match enum options
-  //   launchDate: "2025-01-01T00:00:00.000Z",  // ISO-8601
-  //   heroImage: "",                           // resolved URL after upload
-  //   galleryImages: [],                       // array of resolved URLs
-  // ─────────────────────────────────────────────────────────────────────
+  businessName: "EscapeOps Venue", // fill it here
+  contactEmail: "ops@escapeops.com", // fill it here
+  defaultSessionDurationMinutes: 60, // fill it here
+  bookingSlotIntervalMinutes: 30, // fill it here
+  puzzleFreshnessThresholdDays: 30, // fill it here
+  maxGroupSize: 8, // fill it here
+  enableWaitlist: true, // fill it here
+  enableEmailNotifications: true, // fill it here
+  dashboardWelcomeMessage: "Welcome back. Here's your ops overview.", // fill it here
+  rooms: [
+    { name: "The Alchemist's Lab", theme: "Victorian science mystery", capacity: 6, difficultyRating: 3 },
+    { name: "The Vault", theme: "High-stakes bank heist", capacity: 8, difficultyRating: 4 },
+    { name: "Lost Jungle Temple", theme: "Archaeological adventure", capacity: 6, difficultyRating: 2 },
+  ], // fill it here
 };
