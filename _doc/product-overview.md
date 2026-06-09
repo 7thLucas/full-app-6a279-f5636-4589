@@ -1,0 +1,1 @@
+Build me an app for escape room business owners to help them manage room bookings, puzzle maintenance, and team schedules with the goal to maximize bookings and keep the experience fresh for repeat visitors
